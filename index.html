@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn_style {
+            border: none;
+            background: none;
+            padding: 1.2rem;
+            border: 1px solid rgb(rgb(224, 137, 137), rgb(89, 214, 187), rgb(146, 146, 216));
+            border-radius: .8rem;
+            background-color: brown;
+            color: yellow;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        .btn_style:hover{
+            background-color: rgb(105, 105, 102);
+            color: red;
+            font-family: 'Courier New', Courier, monospace;
+        }   
+        .container{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <button onclick="change_color();" class="btn_style">нажми меня</button>
+    </div>
+    
+    <script>
+        const change_color = () => {
+            let container = document.querySelector('.container');
+            let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'a', 'b', 'e', 'f']; // дефолт для цветом
+            container.style.backgroundColor = `#${letters[Math.round(Math.random()*10)]}${letters[Math.round(Math.random()*10)]}${letters[Math.round(Math.random()*10)]}`;
+            console.log(change_color)
+
+        };
+
+    </script>
+</body>
+</html>
